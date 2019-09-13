@@ -16,13 +16,11 @@ let weatherReport;
 let httpRequest = false; 
 
 function getRequestObject() {
-   alert("OK");
    try {
       httpRequest = new XMLHttpRequest(); 
    }
    catch (requestError) {
-       document.querySelector("p.error").innerHTML = "Forecast not 
-           supported by your browser" ;
+       document.querySelector("p.error").innerHTML = "Forecast not supported by your browser." ;
        document.querySelector("p.error").style.display = "block";
        return false;
    }
@@ -55,6 +53,10 @@ function getWeather(evt) {
    httpRequest.abort();
    httpRequest.open("get", "solar.php?" + "lat=" + latitude + "&lng=" + longitude, true );
    httpRequest.send(null);
+}
+
+function fillWeather() {
+   
 }
 
 var locations = document.querySelectorAll("section ul li");

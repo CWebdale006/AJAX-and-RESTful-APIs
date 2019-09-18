@@ -62,7 +62,7 @@ function fillWeather() {
    if (httpRequest.readyState === 4 && httpRequest.status === 200) {
       weatherReport = JSON.parse(httpRequest.responseText);
 
-      // letiables to set up our table 
+      // variables to set up our table 
       let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       let dateValue = new Date(weatherReport.daily.data[0].time);
       let dayOfWeek = dateValue.getDay(); 

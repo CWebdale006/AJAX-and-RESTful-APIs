@@ -12,5 +12,17 @@ let httpRequest = false;
 let entry = "^IXIC";
 
 function getRequestObject() {
-    
+    try {
+        httpRequest = new XMLHttpRequest();
+    } catch (requestError) {
+        return false; 
+    }
+    alert(httpRequest);
+    return
+}
+
+if (window.addEventListener) {
+    window.addEventListener("load", getRequestObject, false);
+} else if (window.attachEvent) {
+    window.attachEvent("onload", getRequestObject);
 }

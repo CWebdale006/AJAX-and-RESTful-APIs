@@ -12,6 +12,7 @@ let httpRequest = false;
 let entry = "^IXIC";
 
 function getRequestObject() {
+    // try and catch structure to create an XHR object 
     try {
         httpRequest = new XMLHttpRequest();
     } catch (requestError) {
@@ -21,6 +22,17 @@ function getRequestObject() {
     return
 }
 
+// stops any default submission from executing 
+function stopSubmission(evt) {
+    alert("stopSubmission()");
+    if (evt.preventDefault) {
+        evt.preventDefault();
+    } else {
+        evt.returnValue = false;
+    }
+}
+
+// testing the function 
 if (window.addEventListener) {
     window.addEventListener("load", getRequestObject, false);
 } else if (window.attachEvent) {

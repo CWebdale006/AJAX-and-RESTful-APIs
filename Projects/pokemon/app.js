@@ -6,18 +6,19 @@ fetch('https://pokeapi.co/api/v2/pokemon/gible/')
         data => {
             // destructuring the data object
             const {...sprites} = data.sprites;
-
+    
             console.log(sprites.front_shiny);
 
-            // creating variable selectors for cleaner code
+            // adding the sprite into a div
             const htmlSelector = document.getElementById("sprite");
             const img = `<img src="${sprites.front_shiny}" alt="">`;
-            const htmlName = document.querySelector('h5');
-            const pokemonName = 
-            console.log(htmlName)
-            // putting it all together 
             htmlSelector.innerHTML = img;
-            htmlName
+
+            // adding the name of the pokemon 
+            const htmlName = document.querySelector('h5');
+            const pokemonName = data.name;
+            htmlName.innerHTML = pokemonName;
+            console.log(htmlName)
         }
     );
 

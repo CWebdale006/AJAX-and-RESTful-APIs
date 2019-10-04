@@ -4,9 +4,14 @@
 }
 
 #sprite img {
-    width: 10vw;
+    width: 15vw;
 }
 
 .card-title {
     font-size: 30px;
+}
+
+.card {
+    background-color: rgba(214, 70, 183, 0.877)
+    border-radius: 10px; 
 }

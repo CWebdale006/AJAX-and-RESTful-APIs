@@ -1,0 +1,12 @@
+/* trying to make individual cards look nicer */
+#sprite {
+    margin: 0 auto; 
+}
+
+#sprite img {
+    width: 10vw;
+}
+
+.card-title {
+    font-size: 30px;
+}

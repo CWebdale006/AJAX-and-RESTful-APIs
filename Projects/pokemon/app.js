@@ -6,8 +6,8 @@ fetch('https://pokeapi.co/api/v2/pokemon/gible/')
         data => {
             // destructuring the data object
             const {...sprites} = data.sprites;
-    
-            console.log(sprites.front_shiny);
+
+            console.log(data);
 
             // adding the sprite into a div
             const htmlSelector = document.getElementById("sprite");
@@ -17,8 +17,14 @@ fetch('https://pokeapi.co/api/v2/pokemon/gible/')
             // adding the name of the pokemon 
             const htmlName = document.querySelector('h5');
             const pokemonName = data.name;
-            htmlName.innerHTML = pokemonName;
-            console.log(htmlName)
+            const uppercaseName = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
+            htmlName.innerHTML = uppercaseName;
+
+            // adding the type of pokemon
+            const htmlType = document.querySelector('.card-text');
+            const typesArray = data.types;
+            htmlType.innerHTML = `${uppercaseName}'s types are: ${typesArray[0].type.name} and ${typesArray[1].type.name}`
+
+            // NEED TO TAKE ALL THIS INFORMATION AND APPEND AS A DOCUMENT FRAGMENT
         }
     );
-

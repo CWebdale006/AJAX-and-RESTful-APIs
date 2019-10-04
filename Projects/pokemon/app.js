@@ -116,3 +116,9 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/')
         }
     );
     }
+
+    /*
+need to reorder the cards by pokemon number
+need to fix some styles, just looking better
+add multiple cards on one line  
+*/

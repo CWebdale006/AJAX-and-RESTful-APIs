@@ -3,9 +3,9 @@
     margin: 0 auto; 
 }
 
-#sprite img {
+/* .sprite img {
     width: 15vw;
-}
+} */
 
 .card-title {
     font-size: 30px;
@@ -13,4 +13,5 @@
 
 .card {
     border-radius: 10px; 
+    width: 15vw;
 }

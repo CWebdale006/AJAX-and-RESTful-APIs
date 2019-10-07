@@ -13,5 +13,9 @@
 
 .card {
     border-radius: 10px; 
-    width: 15vw;
+    width: 5vw;
+}
+
+img {
+    width: 10vw;
 }

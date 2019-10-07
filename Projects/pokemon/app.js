@@ -10,7 +10,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/')
             let divCard = document.createElement(`div`);
             divCard.setAttribute('class', 'card');
             divCard.setAttribute('id', i);
-            divCard.setAttribute('style', 'width: 30%;');
+            divCard.setAttribute('style', 'width: 25vw;');
 
             // creating the sprite div
             let divSprite = document.createElement(`div`);

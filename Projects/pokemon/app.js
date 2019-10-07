@@ -1,4 +1,6 @@
 // getting data 
+let pokeArray = [];
+let divId = [];
 for (let i = 1; i < 10; i++) {
 fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/')
     // making sure the response is in json 
@@ -38,7 +40,8 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/')
             divBody.innerHTML = h5Name.outerHTML + pType.outerHTML;
             divCard.innerHTML = divSprite.outerHTML + divBody.outerHTML;
 
-            document.body.append(divCard)
+            document.body.append(divCard); 
+            divId.push(divCard);
 
             // destructuring the data object
             const {...sprites} = data.sprites;
@@ -112,9 +115,21 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/')
             } 
 
             /*ORGANIZING THE POKEMON BY NUMBER */
-            
+            // console.log(divCard.id)
+
+
+            // let pokeData = divCard.id; 
+            // pokeArray.push(pokeData);
+            let divValue = divId.id
+
+            divValue.sort(function(a, b){return a-b})
         }
+    )
+    .then(
+        console.log("testing")
     );
+        // console.log(pokeArray)
+        console.log(divId)
     }
 
     /*
